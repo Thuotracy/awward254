@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{%block content%}
+<style>
+    #profile {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+    }
+</style>
+<div class="container" style="font-family: 'Kavivanar', cursive;">
+    <h3>User Profile</h3>
+</div>
+<div class="col-sm-6 m-auto "style="font-family: 'Kavivanar', cursive;">
+    <div class=" container" style="padding-top: 30px;">
+        <div class="media">
+            <div class="col-sm-4">
+                <div id="profile" class="img-responsive">
+                    <img style="width: 150%;
+                    height: 150%;" src="{{user.profile.profile_picture}}.url }}" alt="ur image">
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h4>{{user.username}}</h4>
+                <p>Bio: {{user.profile.bio}}</p>
+                <p>Contact: {{user.profile.contact}}</p>
+                <hr>
+                <a href="/">
+                    <button class="btn btn-success">Update Profile</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{%endblock%}

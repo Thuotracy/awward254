@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{% block content %}
+<div class="container" style="margin-top:40px;font-family: 'Kavivanar', cursive;">
+    <div class="row">
+        {% if results %}
+        <h4 class="text-center">After the search the following results projects was found.</h4>
+        {% else %}
+        <h1 class="text-center"> OOOPS !!!! Found 0 projects for searched title.</h1>
+        {% endif %}
+    </div>
+        {% for project in results%}
+        <div class="col-md-6">
+            <div class="card" style="height:350px; margin-left:200px;margin-bottom:10px;margin-top:20px;">
+                <div class="card-body">
+                    <p style="text-align:center;">{{project.title}}</p>
+                    <img style=" width:100%;height:300px;" class="img-thumbnail " src="{{project.image.url}}">
+                    <p> Description-{{project.description}}.</p>
+                    <P>Uploaded by {{project.user}}.</P>
+                    <a href="{% url 'review' project_id=project.id%}" class="btn btn-success"
+                        style="margin-top:4px;">Rate & Review</a>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{% endblock %}

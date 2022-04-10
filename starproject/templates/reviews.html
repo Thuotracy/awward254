@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load bootstrap3%}
+{% load static %}
+{% block content %}
+<div class="container"style="font-family: 'Kavivanar', cursive;">
+    <div class="row">
+        <div class="col-md-3">
+            {% for proj in project %}
+            <form action="{%url 'review' proj.id %}" method="POST" enctype="multipart/form-data">
+                {%csrf_token%}
+
+                {% bootstrap_form form %}
+                <button type="submit" class="btn btn-success" value="Review">Rate
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

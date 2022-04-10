@@ -1,0 +1,62 @@
+{%extends 'base.html'%}
+{% block content %}
+<div class="container" style="font-family: 'Kavivanar', cursive;">
+    <div class="row">
+        <h2 style=>Rates & Reviews</h2>
+        <div class="">
+            <div class="col-sm-12 col-md-5 col-lg-4">
+                <div class="card" style="height:100%;width:150%;">
+                    <div class="card-body">
+                        <a href="{% url 'prjctdtls' id=project.id %}">
+                            <img class="img-thumbnail mb-10" src="{{project.image.url}}"
+                                style="height: 300px;width: 365px; margin-top:30px;">
+                        </a>
+                    </div>
+                </div>
+                <div class="card" style=" height:100%;margin-bottom:px;">
+                    <div class="card-body">
+                        <p> Project title : {{project.title}} </p>
+                        <p> Description : {{ project.description  }}</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <a href="{% url 'review' project_id=project.id%}" class="btn btn-success">Rate</a>
+                        <a href="{{project.link}}" class="btn btn-success">Live Site link</a>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container" style="margin-top:10px">
+            <h4>This project's Ratings </h4>
+            <hr style="color:black">
+            <div class="col-md-6">
+                {% for review in reviews %}
+                <div class="row">
+                    {% if project.id == review.project.id %}
+                    <p> Rated and reviewed by : {{review.user.username}}</p>
+                    <div class="col-md-2">
+                        <p class="text-center">CONTENT</p>
+                        <p class="text-center">{{review.content}}</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="text-center">USABILITY</p>
+                        <p class="text-center">{{review.usability}}</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="text-center">DESIGN</p>
+                        <p class="text-center">{{review.design}}</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="text-center">Overall project Score</p>
+                        <h3 class="text-center">{{review.average}}</h3>
+                    </div>
+                    {%endif%}
+                </div>
+                {% endfor  %}
+            </div>
+        </div>
+    </div>
+    {% endblock %}

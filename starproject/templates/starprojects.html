@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+{% block content %}
+<div class="container"style="font-family: 'Kavivanar', cursive;">
+    <div class="row">
+        <div class="col-md-4">
+            <form action="{%url 'newstarproject'%}" method="POST" enctype="multipart/form-data">
+                {%csrf_token%}
+                {% bootstrap_form form %}
+                <button value="Post" type="submit" class="btn btn-success " >Upload</button>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

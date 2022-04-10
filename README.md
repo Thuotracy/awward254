@@ -62,9 +62,6 @@ Install  all dependancies that will make the app run/function
     - Postgresql
     - GIT
 
-### Enjoy :)
-
-
 ### Live Link
 
 

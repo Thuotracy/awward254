@@ -1,11 +1,10 @@
-# AWWWARDS
-### ***Star--Awwwards***
+#Awwards254
 
 ## Author
-***Juma Allan.***
+Tracy Wanagri
 
 ## Description
-Star--awwwards is a Python-Django web application where registered users can post project(s) they have created and get it reviewed/rated by their peers(Users).
+Awwards254 is a web application where registered users can post project(s) they have created and get it reviewed/rated by their peers(Users).
 
 
 ## Set Up and Installations
@@ -19,8 +18,8 @@ Star--awwwards is a Python-Django web application where registered users can pos
 
 ### Clone the  project Repo
 Run the following command on the terminal:
-`git clone https://github.com/juma-moringa/Star-Awwwards..git`
-* cd STAR-AWWWARDS
+`git clone https://github.com/Thuotracy/awward254.git`
+* cd Awward254
 
 ###  Install and activate virtual environment
 Activate virtual environment using python3.8 
@@ -35,7 +34,7 @@ Install  all dependancies that will make the app run/function
 
 ### Create the Database
 * psql
-* create database awards;
+* create database awwards254;
 
 ### Make Migrations
 * python3 manage.py makemigrations starproject(App name)
@@ -51,17 +50,13 @@ Install  all dependancies that will make the app run/function
 ### Admin dashboard
 * The admin dashboard can be accessed from the dropdown menu just below the profile icon.
 * Firstly you must be on the homepage to access it.
-`Username: Admin`
-`Password: Access254`
-
- ### API Endpoints
-  - ***[Profiles Endpoint](https://starawwards.herokuapp.com/api/profileb)***
-  - ***[Projects Endpoint](https://starawwards.herokuapp.com/api/projectsb)***
+`Username: tracy`
+`Password: wangari`
 
 ### Technologies used
     - Python 3.8.10
     - HTML5
-    - Django 3.2.5
+    - Django 4.0.3
     - Bootstrap 3
     - Heroku
     - Postgresql
@@ -72,10 +67,9 @@ Install  all dependancies that will make the app run/function
 
 ### Live Link
 
-***[View Live Site.](https://starawwards.herokuapp.com/)***
+
 
 ### License
 
-Star--Awwwards is under the ***[MIT](LICENSE)*** license.
+Awwards254 is under the ***[MIT](LICENSE)*** license.
 
-@Jaycreations-2021.

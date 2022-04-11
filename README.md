@@ -10,16 +10,15 @@ Awwards254 is a web application where registered users can post project(s) they 
 ## Set Up and Installations
 
 ### Prerequisites
-    - Ubuntu Software
     - Python3.8.10
     - Postgres
     - python virtual environment (virtual:venv).
-    - Text editor - preferably Visual Studio Code Editor.
+    - Visual Studio Code Editor.
 
 ### Clone the  project Repo
 Run the following command on the terminal:
 `git clone https://github.com/Thuotracy/awward254.git`
-* cd Awward254
+* cd Awwards254
 
 ###  Install and activate virtual environment
 Activate virtual environment using python3.8 

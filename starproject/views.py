@@ -88,11 +88,6 @@ def project_search(request):
         message = "Your search did not match any project titles onboard."
     return render(request, 'projectsearch.html', {'message': message})
 
-# class MerchList(APIView):
-#     def get(self, request, format=None):
-#         all_merch = MoringaMerch.objects.all()
-#         serializers = MerchSerializer(all_merch, many=True)
-#         return Response(serializers.data) 
 
 class ProfileList(APIView):
    
@@ -132,16 +127,6 @@ class ProjectDescription(APIView):
         except Project.DoesNotExist:
             return Http404
 
-    # def put(self,request, pk, format=None):
-    #     merch = self.get_project(pk)
-    #     serializers = MerchSerializer(Project, request.data)
-    #     if serializers.is_valid():
-    #         serializers.save()
-    #         return Response(serializers.data)
-    #     else:
-    #         return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)        
-
-
 @login_required(login_url='/accounts/login/')
 def review_awward_project(request,project_id):
     review_projct = Project.project_by_id(id=project_id)
@@ -154,7 +139,6 @@ def review_awward_project(request,project_id):
             design = form.cleaned_data['design']
             usability = form.cleaned_data['usability']
             rate = Review()
-            # rate_avarage=(rate.usability +rate.design + rate.content)/3
             rate.project = project
             rate.user = current_user
             rate.usability = usability
@@ -162,8 +146,7 @@ def review_awward_project(request,project_id):
             rate.content = content
             rate.average = (rate.usability +rate.design + rate.content)/3
             rate.save()
-            # rate_avarage= (rate.average)/3
-            # rate_avarage.save()
+        
             return HttpResponseRedirect(reverse('prjctdtls', args=(project.id,)))
     else:
         form = ReviewsForm()

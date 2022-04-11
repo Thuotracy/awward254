@@ -65,9 +65,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+4wef@3rr_&nr(wyg=ve3jhg@uprvu21aztpy=)%x3a$w_@%qq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -84,7 +84,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'rest_framework',
     'rest_framework.authtoken',
-    'registration'
+    'registration',
 ]
 
 MIDDLEWARE = [

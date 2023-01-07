@@ -1,6 +1,4 @@
 #Awwards254
-## Author.
-Tracy Wanagri
 
 ## Description
 Awwards254 is a web application where registered users can post project(s) they have created and get it reviewed/rated by their peers(Users).

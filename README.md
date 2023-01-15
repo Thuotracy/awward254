@@ -59,9 +59,3 @@ Install  all dependancies that will make the app run/function
 
 ### Live Link
 
-
-
-### License
-
-Awwards254 is under the ***[MIT](LICENSE)*** license.
-

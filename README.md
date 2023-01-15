@@ -56,6 +56,3 @@ Install  all dependancies that will make the app run/function
     - Heroku
     - Postgresql
     - GIT
-
-### Live Link
-
